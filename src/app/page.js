@@ -25,11 +25,10 @@ export default function Home() {
   return (
     <div className="flex flex-col relative bg-background font-raleway items-center min-h-screen">
       <h1 className="text-6xl text-primary font-bold mt-20">
-        Crypto News <span className="text-active">App</span>
+      Follow    <span className="text-active">Trends</span> &  Attain <span className="text-active">Success</span>  
       </h1>
       <h2 className="text-active text-2xl mt-6">
-        Next.js app that provides information on the latest news about Crypto
-        using Cryptocurrency API
+      Dive into the latest crypto trends with Coinsquare, your hub for real-time news and insights.
       </h2>
       <div className="mt-12 sm:mx-auto justify-center sm:w-full sm:flex">
         <div className="mt-4 sm:mt-0 sm:ml-3">
