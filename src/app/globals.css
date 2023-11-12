@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.hero {
+  @apply flex xl:flex-row flex-col relative z-0 px-6 h-screen bg-the-crypto bg-cover bg-center;
+}
+
+.hero__image {
+  @apply relative xl:w-[100%] w-full h-[400px] z-0;
+}

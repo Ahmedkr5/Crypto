@@ -1,7 +1,9 @@
 "use client";
 import axios from "axios";
 import { useState } from "react";
-import Loading from "./loading";
+import Loading from "../components/loading";
+import Hero from "@/components/Hero";
+import Image from "next/image";
 export default function Home() {
   const [page, setPage] = useState(1);
   const [response, setResponse] = useState();
@@ -23,25 +25,8 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col relative bg-background font-raleway items-center min-h-screen">
-      <h1 className="text-6xl text-primary font-bold mt-20">
-      Follow    <span className="text-active">Trends</span> &  Attain <span className="text-active">Success</span>  
-      </h1>
-      <h2 className="text-active text-2xl mt-6">
-      Dive into the latest crypto trends with Coinsquare, your hub for real-time news and insights.
-      </h2>
-      <div className="mt-12 sm:mx-auto justify-center sm:w-full sm:flex">
-        <div className="mt-4 sm:mt-0 sm:ml-3">
-          {!loading && !response && (
-            <button
-              className="block w-full rounded-md px-5 py-3 bg-active text-base font-bold text-background focus:outline-none focus:ring-2 focus:ring-primary sm:px-10"
-              onClick={() => getNews()}
-            >
-              Get Latest News
-            </button>
-          )}
-        </div>
-      </div>
+    <div className="flex flex-col relative bg-background font-raleway  min-h-screen">
+    <Hero getNews={getNews} loading={loading} response={response} />
       <div className="mt-10 grid grid-cols-2 gap-16 max-w-5xl">
         {loading && <Loading />}
         {response !== undefined &&

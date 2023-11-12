@@ -26,7 +26,7 @@ const Navbar = () => {
   ];
 
   return (
-<div className="flex justify-between items-center w-full h-20 px-4 text-white fixed bg-background nav" style={{ zIndex: 1000, width: '100%', height: '60px' }}>
+<div className="flex justify-between items-center w-full h-20 px-4 text-white fixed bg-dark nav" style={{ zIndex: 1000, width: '100%', height: '60px' }}>
       <div >
   
       {/*  <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
@@ -38,7 +38,7 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
           >
-        C <BsCoin size={24}/>   insquare
+       Coinexo
           </a>
 
 
