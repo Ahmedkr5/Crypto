@@ -1,27 +1,25 @@
-const Hero = ({ getNews, loading, response }) => {
+
+const Hero = ({ news,i }) => {
   return (
-    <div
-      className="hero"
+    <div key={i} className="mt-10 grid justify-items-center">
+    <img
+      src={news.related_image_big}
+      width="300"
+      height="300"
+      className="rounded-lg"
+      alt={`News Image ${i}`}
+    />
+    <a
+      className="text-primary text-center hover:text-active transition-colors duration-200"
+      key={news.news_ID}
+      href={news.news_link ? news.news_link : news.third_party_url}
     >
-      <div className="absolute top-1/2 transform -translate-y-1/2 xl:text-left mx-auto px-6 text-white md:w-auto">
-        <p className="xl:text-6xl break-normal text-4xl text-primary font-bold">
-          Follow <span className="text-active">Trends</span> & Attain{" "}
-          <span className="text-active">Success</span>
-        </p>
-        <p className="text-primary text-l mt-6">
-          Dive into the latest crypto trends with Coinexo, your hub for real-time
-          news and insights.
-        </p>
-        {!loading && !response && (
-          <button
-            className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  hover:bg-hover block mt-2 sm:mb-0 w-auto rounded-md px-5 py-3 bg-active text-base font-bold text-background focus:outline-none focus:ring-2 focus:ring-primary sm:px-10"
-            onClick={() => getNews()}
-          >
-            Get Latest News
-          </button>
-        )}
-      </div>
-    </div>
+      <h3 className="mt-10 text-2xl">{news.HEADLINE}</h3>
+      <p className="mt-4 text-center text-lg opacity-60">
+        {news.news_provider_name}
+      </p>
+    </a>
+  </div>
   );
 };
 
