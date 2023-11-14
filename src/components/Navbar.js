@@ -52,7 +52,7 @@ const Navbar = () => {
             key={id}
             className="nav-links px-4 cursor-pointer capitalize font-medium text-active hover:scale-105 hover:text-white duration-200 link-underline"
           >
-            <Link href={link}>{link}</Link>
+            <Link href="/">{link}</Link>
           </li>
         ))}
       </ul>
